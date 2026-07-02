@@ -220,9 +220,10 @@ anthropic 1.5, rag-retrieval 1, local-ai 1, everything else 0.
 
 ## 10. Environment variables
 
-See `.env.example`: `DATABASE_URL` (Neon pooled), `AUTH_SECRET`,
-`AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET`, `CRON_SECRET`. `RESEND_*` and
-`DIGEST_RECIPIENT_EMAIL` are gone with email.
+See `.env.example`: `DATABASE_URL` (Neon pooled), `DIRECT_DATABASE_URL` (Neon
+direct/unpooled — CLI-only, Prisma Migrate can't run through the PgBouncer
+pooler), `AUTH_SECRET`, `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET`, `CRON_SECRET`.
+`RESEND_*` and `DIGEST_RECIPIENT_EMAIL` are gone with email.
 
 ## 11. Route protection
 
