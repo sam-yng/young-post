@@ -12,6 +12,6 @@ export default defineConfig({
   datasource: {
     // CLI-only (the runtime client connects via its driver adapter):
     // migrations need Neon's direct endpoint, not the PgBouncer pooler.
-    url: process.env["DIRECT_DATABASE_URL"] ?? process.env["DATABASE_URL"],
+    url: process.env.DIRECT_DATABASE_URL ?? process.env.DATABASE_URL,
   },
 });
