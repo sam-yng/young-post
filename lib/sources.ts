@@ -50,7 +50,7 @@ export const SOURCES: readonly Source[] = [
   },
   {
     name: "Evil Martians",
-    url: "https://evilmartians.com/chronicles.rss",
+    url: "https://evilmartians.com/chronicles.atom",
     tags: ["frontend-development"],
   },
   {
