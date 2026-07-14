@@ -1,6 +1,6 @@
 # M6 — Votes + tag preferences
 
-Status: active (started 2026-07-14).
+Status: completed (started and completed 2026-07-14).
 
 Goal: close the feedback loop. A signed-in user's votes adjust only their tag
 weights and ranked feed; all fifteen weights are also directly editable.
@@ -74,8 +74,8 @@ and user isolation together.
 - [x] Add preferences editor and live navigation.
 - [x] Run automated gate and production build.
 - [x] Verify the unauthenticated shell, page redirect, and API guard locally.
-- [ ] Run local signed-in smoke test with ingested data.
-- [ ] Run signed-in multi-user mutation smoke test with real DB/Auth settings.
+- [x] Run local signed-in smoke test with ingested data.
+- [x] Run signed-in multi-user mutation smoke test with real DB/Auth settings.
 
 ## Acceptance
 
@@ -109,3 +109,10 @@ comment/social features, ranking-algorithm changes, and digest UI.
   external credentials are available and the manual check is recorded.
 - 2026-07-14: M5 completed after its remaining local signed-in feed smoke check
   moved into this plan. M6 now owns both outstanding manual checks.
+- 2026-07-14: signed-session smoke used isolated real-DB/Auth fixture users and
+  articles, deleted after verification. Initial/repeated/flipped votes produced
+  `+0.5`/`0`/`-1.0` per target tag, persisted across a feed reload, and reordered
+  the target above a comparison article. Saving all fifteen preferences persisted
+  the signed-in user's values and rescored the feed; second user's weights and
+  scores remained unchanged. `bun run check` passed (32 tests, 94 assertions)
+  and `bun run build` passed.
