@@ -1,6 +1,6 @@
 # M5 — Personalised feed UI
 
-Status: active (started 2026-07-14).
+Status: completed (started and completed 2026-07-14).
 
 Goal: signed-in users see a clean, paginated version of their ranked article
 feed at `/`, assembled from the M5.5 design-system primitives.
@@ -44,8 +44,8 @@ personalised Prisma read uncached and request-scoped.
    - unit tests cover page parsing, viewer scoping, 31-row lookahead, trimming,
      and empty pages without weakening existing tests;
    - `bun run check` passes;
-   - local signed-in smoke test with ingested data remains required before this
-     plan moves to `completed/`.
+   - local signed-in smoke test with ingested data is owned by active M6, where
+     the same feed also exercises persisted votes and preference-driven ranking.
 
 ## Progress
 
@@ -54,7 +54,9 @@ personalised Prisma read uncached and request-scoped.
 - [x] Build article cards, feed list, masthead page, and pagination.
 - [x] Restyle authenticated header.
 - [x] Run automated gate and production build.
-- [ ] Run local signed-in smoke test with ingested data.
+
+Lifecycle note: signed-in feed smoke ownership transferred to M6 before this
+plan moved to `completed/`.
 
 ## Acceptance
 

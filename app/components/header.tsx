@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { auth, signOut } from "@/lib/auth";
+import { HeaderNav } from "./header-nav";
 import { StickerButton } from "./ui";
 
 export async function Header() {
@@ -17,20 +18,7 @@ export async function Header() {
 
         {session?.user ? (
           <div className="flex min-w-0 items-center gap-5">
-            <nav
-              aria-label="Primary navigation"
-              className="hidden items-center gap-4 font-mono text-[10px] uppercase tracking-[0.12em] sm:flex"
-            >
-              <Link className="font-bold text-fg underline underline-offset-4" href="/">
-                Feed
-              </Link>
-              <span className="cursor-not-allowed text-meta" title="Coming in M7">
-                Digest
-              </span>
-              <span className="cursor-not-allowed text-meta" title="Coming in M6">
-                Preferences
-              </span>
-            </nav>
+            <HeaderNav />
 
             <div className="hidden min-w-0 items-center gap-2.5 lg:flex">
               <span
