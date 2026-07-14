@@ -13,7 +13,7 @@ export async function Header() {
           href="/"
           className="font-display text-[25px] leading-none text-fg focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fg"
         >
-          Young Post
+          Rankwire
         </Link>
 
         {session?.user ? (

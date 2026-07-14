@@ -21,9 +21,9 @@ export async function seedTagWeights(userId: string): Promise<void> {
 // default weights for local testing.
 async function main() {
   const dev = await db.user.upsert({
-    where: { email: "dev@young-post.local" },
+    where: { email: "dev@rankwire.local" },
     update: {},
-    create: { email: "dev@young-post.local", name: "Dev User" },
+    create: { email: "dev@rankwire.local", name: "Dev User" },
   });
   await seedTagWeights(dev.id);
   console.log(`Seeded dev user ${dev.id} with default tag weights.`);

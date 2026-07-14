@@ -5,8 +5,8 @@ Status: active (started 2026-07-14).
 Goal: close the feedback loop. A signed-in user's votes adjust only their tag
 weights and ranked feed; all fifteen weights are also directly editable.
 
-Spec: `../../design-docs/young-post-design.md` §8, §9, §11 and
-`../../design-docs/young-post-design-system.md` §4, §7. M4 already provides the
+Spec: `../../design-docs/rankwire-design.md` §8, §9, §11 and
+`../../design-docs/rankwire-design-system.md` §4, §7. M4 already provides the
 one-user rescore path. M5 already provides viewer-scoped feed reads and reserved
 card-footer space. M5 is complete; its remaining signed-in feed smoke test moved
 here so one manual session can verify feed data, vote mutations, preferences,
