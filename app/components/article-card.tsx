@@ -11,9 +11,12 @@ const publishedDate = new Intl.DateTimeFormat("en-AU", {
 
 type ArticleCardProps = {
   article: FeedArticle;
+  headingLevel?: 2 | 3;
 };
 
-export function ArticleCard({ article }: ArticleCardProps) {
+export function ArticleCard({ article, headingLevel = 2 }: ArticleCardProps) {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
+
   return (
     <article className="flex h-full flex-col rounded-card border border-fg bg-surface p-5 shadow-card sm:p-6">
       <div className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.12em] text-meta">
@@ -23,7 +26,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
         </time>
       </div>
 
-      <h2 className="mt-5 font-serif text-[24px] leading-[1.12] tracking-[-0.015em] text-fg">
+      <Heading className="mt-5 font-serif text-[24px] leading-[1.12] tracking-[-0.015em] text-fg">
         <a
           href={article.url}
           target="_blank"
@@ -33,7 +36,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
           {article.title}
           <span className="sr-only"> (opens in a new tab)</span>
         </a>
-      </h2>
+      </Heading>
 
       {article.summary ? (
         <p className="mt-4 line-clamp-3 font-sans text-[14.5px] leading-[1.6] text-meta">
