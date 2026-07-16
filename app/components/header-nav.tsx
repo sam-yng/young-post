@@ -20,9 +20,13 @@ export function HeaderNav() {
       >
         Feed
       </Link>
-      <span className="cursor-not-allowed text-meta" title="Coming in M7">
+      <Link
+        className={`${BASE} ${pathname === "/digest" ? "underline underline-offset-4" : ""}`}
+        href="/digest"
+        aria-current={pathname === "/digest" ? "page" : undefined}
+      >
         Digest
-      </span>
+      </Link>
       <Link
         className={`${BASE} ${pathname === "/preferences" ? "underline underline-offset-4" : ""}`}
         href="/preferences"
